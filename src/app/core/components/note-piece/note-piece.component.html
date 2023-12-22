@@ -1,0 +1,20 @@
+<div class="note-piece" [ngStyle]="{ 'background-color': pieceColor }">
+    <div class="title">
+        <h2 #noteTitle>{{ title }}</h2>
+        <button mat-button [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()"><img src="../../../../assets/icons/menu.svg" alt="menu"></button>
+        <mat-menu #menu="matMenu" class="customize-menu">
+            <button mat-menu-item>
+                <mat-icon>clear</mat-icon>
+                <span>Delete</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>favorite</mat-icon>
+                <span>Add to Favorite</span>
+            </button>
+        </mat-menu>
+    </div>
+
+    <div class="content">
+        <p #noteContent>{{ content }}</p>
+    </div>
+</div>

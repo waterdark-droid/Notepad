@@ -1,0 +1,35 @@
+<div class="note-container">
+    <div class="top-bar">
+        <div class="arrow-back">
+            <button routerLink="/notes">
+                <img src="../../../../assets/icons/arrow_back.svg" alt="arrow-back">
+            </button>
+        </div>
+        <div class="toolbar">
+
+        </div>
+        <div class="action-bar">
+            <button (click)="saveNote()" #saveBtn [disabled]="saveBtnDisabled">Save</button>
+            <button (click)="clearNote()" #clearBtn [disabled]="clearBtnDisabled">Clear</button>
+        </div>
+    </div>
+    <div class="bottom-content">
+        <div class="side-bar">
+          <app-custom-dropdown (sendColorToNote)="getColor($event)" [defaultColor]="selectedColor"></app-custom-dropdown>
+        </div>
+        <div class="content">
+            <div class="title">
+                <textarea name="title" rows="1" cols="50" placeholder="Title" (keyup)="onInputChange()" [(ngModel)]="title">{{ title }}</textarea>
+                <br>
+                <small #titleAlert>*Provide atleast 1 word</small>
+            </div>
+            <div class="note-content">
+                <textarea name="content" cols="100" rows="25" placeholder="Content" (keyup)="onInputChange()" [(ngModel)]="content">{{ content }}</textarea>
+                <br>
+                <small #contentAlert>*Provide atleast 2 words</small>
+            </div>
+        </div>
+      
+    </div>
+
+</div>

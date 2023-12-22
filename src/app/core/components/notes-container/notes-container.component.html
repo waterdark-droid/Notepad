@@ -1,0 +1,12 @@
+<div class="notes-container">
+    <div  class="note-piece-grid">
+        <div *ngFor="let note of notes">
+            <app-note-piece (click)="goToNote(note.id)" [pieceColor]="note.color" [title]="note.title" [content]="note.content"></app-note-piece>
+               
+        </div>
+    </div>
+
+    <div class="add-notes-btn" (click)="onAddClick()">
+        <img src="../../../../assets/icons/add.svg" alt="add">
+    </div>
+</div>

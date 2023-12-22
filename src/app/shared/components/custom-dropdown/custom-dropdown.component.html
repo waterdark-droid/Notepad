@@ -1,0 +1,14 @@
+<div class="custom-dropdown">
+
+    <div (click)="toggleDropdown()" class="current-color" [ngStyle]="{'background-color': defaultColor}">
+        <div class="down"><img src="../../../../assets/icons/keyboard_arrow_down.svg" #arrow style="rotate: -90deg;"></div>
+    </div>
+    <br>
+        <div *ngIf="showDropdown" class="dropdown">
+            <div *ngFor="let color of colors">
+                <div class="color" [ngStyle]="{'background-color': color}" (click)="onColorClicked(color)"></div>
+            </div>
+        </div>
+      
+</div>
+

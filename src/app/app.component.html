@@ -1,3 +1,12 @@
-<div>
-  <h1>Hello World</h1>
+<header class="header">
+  <h2>{{ title }}</h2>
+</header>
+<div class="hr"></div>
+<div class="container">
+  <div class="left-nav">
+    <app-left-nav></app-left-nav>
+  </div>
+  <div class="right-body">
+    <router-outlet></router-outlet>
+  </div>
 </div>

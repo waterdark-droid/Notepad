@@ -1,0 +1,74 @@
+.note-piece{
+    height: 25vh;
+    width: 20vw;
+    padding: 20px;
+    background-color: #FF3D3D;
+    border-radius: 18px;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    row-gap: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    outline: none;
+    border-color: transparent;
+    animation: 1s ease-out 0s 1 slideFromTop;
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0%;
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+.note-piece:hover{
+    box-shadow: none;
+    transition: 0.4s;
+    transform: scale(0.99);
+}
+
+.title{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.title h2{
+    display: inline;
+    font-family: 'Open Sans Bold';
+    color: white;
+}
+
+.title button{
+    background-color: transparent;
+    border: none;
+    transform: scale(1.4);
+    margin: auto;
+    height: 30px;
+}
+
+.title button:hover{
+    transform: scale(1.3);
+    transition: 0.4s;
+}
+
+.content{
+    font-family: 'Open Sans SemiBold';
+    color: white;
+    font-size: 14px;
+}
+
+.content p{
+    line-height: 185%;
+}
+
+::ng-deep .customize-menu{
+    background-color: #404040 !important;
+
+}
+
+::ng-deep .customize-menu button mat-icon,::ng-deep .customize-menu button span{
+    color: white !important;
+}

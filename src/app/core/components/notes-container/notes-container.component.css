@@ -1,0 +1,38 @@
+.notes-container{
+    height: 70%;
+
+    position: relative;
+}
+
+.add-notes-btn{
+    height: 70px;
+    width: 70px;
+    background-color: #4F75FF;
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: rgba(48, 48, 48, 0.2) 0px 7px 29px 0px;
+    top: 110%;
+    left: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.add-notes-btn:hover{
+    transition: 0.4s;
+    transform: scale(1.03);
+}
+
+.add-notes-btn:active{
+    box-shadow: none;
+}
+
+.note-piece-grid{
+    width: 70%;
+    margin-top: 70px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 70px;
+}

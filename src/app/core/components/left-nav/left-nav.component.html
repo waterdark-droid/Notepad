@@ -1,0 +1,7 @@
+<div class="left-nav-container">
+    <ul *ngFor="let nav of navs">
+        <li>
+            <button routerLinkActive="link-active" routerLink="{{ nav.link }}"><div class="red-spot"></div>{{ nav.name }}</button>
+        </li>
+    </ul>
+</div>
